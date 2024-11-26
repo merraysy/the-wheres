@@ -4,10 +4,11 @@ This is a toy project I built specifically for Crionet :rocket:
 
 ## How to run
 
-- The project worked well using `nodejs@v20.18.0`
+> Note: project worked well using `nodejs@v20.18.0`
+
 - Clone the the project `git clone ${repo}`
 - I use `pnpm@9.12.2` for more info [pnpm/pnpm](https://github.com/pnpm/pnpm), so run `pnpm i`
-- Then either run the project localy like this `pnpm dev` or
+- Then either run the project localy like this `pnpm preview` or `pnpm dev` or
 - Run `pnpm build` and serve the `dist` folder folder, you can use [http/party/http-server](https://github.com/http-party/http-server) like so `http-server ./dist`
 
 ## Explaining the architecture
@@ -34,7 +35,7 @@ As for the architecture, let's do it in bullet points:
   ```
 
 - I used [shadcn-ui/ui](https://github.com/shadcn-ui/ui) as a ui library, cause I want to own the code base and avoid encapsulated props and styles (very long topic)
-- Used [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) for styling, pretty good developer experience, might now work for every project though (another long topic)
+- Used [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) for styling, pretty good developer experience, might not work for every project though (another long topic)
 - and of course `eslint` with `autofix` on save (or `pre-commit`)
 
 I will as well touch on a quick coding decision I made regarding loading and error handling:
@@ -129,15 +130,15 @@ export const request: APIRequest = async ({ url, method = 'GET', ...rest }) => {
 
 ## Challenges faced
 
-Most challenges I faced were related to Graphql, as somebody who never used Graphql, it was a bit challenging to be get up and running with writing queries and stuff, things got smoother when I discovered [apollographql/apollo-client](https://github.com/apollographql/apollo-client) though.
+Most challenges I faced were related to Graphql, as somebody who never used Graphql, it was a bit challenging to get up and running with writing queries and stuff, things got smoother when I discovered [apollographql/apollo-client](https://github.com/apollographql/apollo-client) though.
 
-More challenges also related to Graphql, is when I tried to filter/sort the data, I finally discovered that the API I used haven't all filtering/sorting params set for my use cases...
+More challenges also related to Graphql, is when I tried to filter/sort the data, I finally discovered that the API I used did't have all the filtering/sorting params I set for my use cases...
 
 ## If I had more time
 
 - I like organized code, I would install more tools to clean up imports (sort them), clean up long lines without using `prettier` (long story) and use .env files
 - I would structure the API related code a bit differently
 - Routes also need improvements
-- styling also needs more care
+- Styling also needs more care
 
-Well for a project made in a day or so, of course everyting seems to lack something...
+Well, for a project made in a day or so, of course everyting seems to lack something...
