@@ -4,8 +4,9 @@ This is a toy project I built specifically for Crionet :rocket:
 
 ## How to run
 
+- The project worked well using `nodejs@v20.18.0`
 - Clone the the project `git clone ${repo}`
-- I use `pnpm` for more info [pnpm/pnpm](https://github.com/pnpm/pnpm), so run `pnpm i`
+- I use `pnpm@9.12.2` for more info [pnpm/pnpm](https://github.com/pnpm/pnpm), so run `pnpm i`
 - Then either run the project localy like this `pnpm dev` or
 - Run `pnpm build` and serve the `dist` folder folder, you can use [http/party/http-server](https://github.com/http-party/http-server) like so `http-server ./dist`
 
