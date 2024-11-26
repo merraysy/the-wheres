@@ -1,0 +1,1 @@
+export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => <main className="flex flex-col h-screen px-9 py-6 max-sm:px-6">{children}</main>
